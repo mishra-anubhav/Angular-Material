@@ -7,10 +7,18 @@ import { ReplaySubject } from 'rxjs';
 })
 export class ProductsComponent {
     productName ="A Book";
+    isDisabled =true;
+    products =['A book', 'A tree'];
+
+onAdd(){
+this.products.push(this.productName);
+}
+
     constructor(){
-// setTimeout(() =>
-//     {
-//         this.productName = "A tree";
-//     }, 3000);
+setTimeout(() =>
+    {
+        this.productName = "A tree";
+        this.isDisabled =false;
+    }, 3000);
     }
 }
