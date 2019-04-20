@@ -1,6 +1,6 @@
 <h1>MY Products</h1>
 <!-- two way data binding using NgModel -->
-<input type="text" [(ngModel)]="productName">
+<input *ngIf="!isDisabled" type="text" [(ngModel)]="productName">
 
 <button (click)="onAdd()">
     Add NAme
